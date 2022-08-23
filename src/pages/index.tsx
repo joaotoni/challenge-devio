@@ -4,33 +4,35 @@ import { secondObject } from "../Objects/secondObject"
 export default function Home(){
     return(
         <main className=" ">
-            <div className="flex flex-col items-start ml-8 mb-4">
+            <div className="flex flex-col items-start ml-8 mb-4 md:items-start ml-16" >
                 <span className="pb-2 pt-8 text-2xl font-bold">Seja bem vindo!</span>
                 <input 
-                    className="bg-gray-200 p-2 w-3/4 rounded-md"
+                    className="bg-gray-200 p-2 w-3/4 rounded-md md:w-1/5"
                     type="text"
                     placeholder="O que você procura?"
                 />
             </div>
-            <div className="flex  flex-col  items-start ml-8">
+            <div className="flex  flex-col  items-start ml-8 md:items-start mt-14 ml-16" >
                     <h2 className="font-bold text-lg text-left">Categorias</h2>
                     <span className="font-normal">Navegue por categoria</span>
-                </div>
-            <div className="flex items-center overflow-x-auto scroll-smooth mt-6">   
+            </div>
+            <div className="flex items-center overflow-x-auto scroll-smooth mt-6 md:justify-around overflow-hidden">   
                 {firstObject.map((element, index) =>(
                     <div className=" flex  px-6 shadow-md flex-col p-6 mr-10 " key={element.title + index}>
-                        <img className="max-w-none " src={element.img} alt={element.title}  />
-                        <h2 className="font-bold text-lg">{element.title}</h2>
+                        <button>
+                            <img className="max-w-none " src={element.img} alt={element.title}  />
+                            <h2 className="font-bold text-lg">{element.title}</h2>
+                        </button>
                     </div>
                 ))}
             </div>
-            <div className="flex  flex-col  items-start ml-8 mt-8">
+            <div className="flex  flex-col  items-start ml-8 mt-8 md:items-start mt-14 ml-16">
                 <h2 className="font-bold text-lg text-left">Produtos</h2>
                 <span className="font-normal">Selecione um produto para adicionar ao seu pedido</span>
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col md:flex-row flex-wrap m-0 ">
                 {secondObject.map((element, index) => (
-                    <div className=" m-auto mb-8   p-6  " key={element.title + index}>
+                    <div className=" m-auto mb-8 p-6 md:m-0 " key={element.title + index}>
                         <button className="shadow-md">
                             <img className="max-w-none m-0 " src={element.img} alt={element.title} width="287"  />
                             <h2 className="font-bold text-lg">{element.title}</h2>
