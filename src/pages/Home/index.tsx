@@ -1,10 +1,11 @@
-import {firstObject} from "../Objects/firstObject"
-import { secondObject } from "../Objects/secondObject"
+import Modal from "../../components/Modal";
+import {firstObject} from "../../Objects/firstObject"
+import { secondObject } from "../../Objects/secondObject"
 
 export default function Home(){
     return(
         <main className=" ">
-            <div className="flex flex-col items-start ml-8 mb-4 md:items-start ml-16" >
+            <div className="flex flex-col items-start md:mb-4 md:items-start md:ml-16" >
                 <span className="pb-2 pt-8 text-2xl font-bold">Seja bem vindo!</span>
                 <input 
                     className="bg-gray-200 p-2 w-3/4 rounded-md md:w-1/5"
@@ -12,7 +13,7 @@ export default function Home(){
                     placeholder="O que você procura?"
                 />
             </div>
-            <div className="flex  flex-col  items-start ml-8 md:items-start mt-14 ml-16" >
+            <div className="flex  flex-col  items-start ml-8 md:items-start md:mt-14 md:ml-16" >
                     <h2 className="font-bold text-lg text-left">Categorias</h2>
                     <span className="font-normal">Navegue por categoria</span>
             </div>
@@ -26,18 +27,19 @@ export default function Home(){
                     </div>
                 ))}
             </div>
-            <div className="flex  flex-col  items-start ml-8 mt-8 md:items-start mt-14 ml-16">
+            <div className="flex  flex-col  items-start ml-8 mt-8 md:items-start md:mt-14 md:ml-16">
                 <h2 className="font-bold text-lg text-left">Produtos</h2>
                 <span className="font-normal">Selecione um produto para adicionar ao seu pedido</span>
             </div>
-            <div className="flex flex-col md:flex-row flex-wrap m-0 ">
+            <div className="flex flex-col md:flex-row md:flex-wrap md:m-0 md:justify-center ">
                 {secondObject.map((element, index) => (
-                    <div className=" m-auto mb-8 p-6 md:m-0 " key={element.title + index}>
-                        <button className="shadow-md">
+                    <div className=" m-auto mb-8 p-6 md:m-0  " key={element.title + index}>
+                        <button className="bg-[#36A460] shadow-md">
                             <img className="max-w-none m-0 " src={element.img} alt={element.title} width="287"  />
                             <h2 className="font-bold text-lg">{element.title}</h2>
                             <span>{element.text}</span>
                             <p className="font-bold text-lg mt-4">{element.value}</p>
+                            <Modal />
                         </button>
                     </div>
                 ))}
