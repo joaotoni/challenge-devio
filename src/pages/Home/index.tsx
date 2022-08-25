@@ -18,8 +18,7 @@ export default function Home(){
                 <input 
                     className="bg-gray-200 p-2 w-3/4 rounded-md md:w-1/5"
                     type="text"
-                    placeholder="O que você procura?"
-                />
+                    placeholder="O que você procura?"/>
             </div>
             <div className="flex  flex-col  items-start ml-8 md:items-start md:mt-14 md:ml-16" >
                     <h2 className="font-bold text-lg text-left">Categorias</h2>
@@ -57,6 +56,7 @@ export default function Home(){
             </div>     
             {showModal ? (
                 <>  
+
                  <Modal />
                 </>
               ) : null}
