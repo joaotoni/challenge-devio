@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface IModalContext{
     showModal: boolean
     setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
