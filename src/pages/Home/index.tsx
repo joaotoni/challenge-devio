@@ -1,6 +1,7 @@
 import Modal from "../../components/Modal";
-import {firstObject} from "../../Objects/firstObject"
-import { secondObject } from "../../Objects/secondObject"
+import {categoriesObject} from "./CategoriesObject"
+import { ProductObject } from "./productsObjects"
+
 
 export default function Home(){
     return(
@@ -18,7 +19,7 @@ export default function Home(){
                     <span className="font-normal">Navegue por categoria</span>
             </div>
             <div className="flex items-center overflow-x-auto scroll-smooth mt-6 md:justify-around overflow-hidden">   
-                {firstObject.map((element, index) =>(
+                {categoriesObject.map((element, index) =>(
                     <div className=" flex  px-6 shadow-md flex-col p-6 mr-10 " key={element.title + index}>
                         <button>
                             <img className="max-w-none " src={element.img} alt={element.title}  />
@@ -32,14 +33,14 @@ export default function Home(){
                 <span className="font-normal">Selecione um produto para adicionar ao seu pedido</span>
             </div>
             <div className="flex flex-col md:flex-row md:flex-wrap md:m-0 md:justify-center ">
-                {secondObject.map((element, index) => (
+                {ProductObject.map((element, index) => (
                     <div className=" m-auto mb-8 p-6 md:m-0  " key={element.title + index}>
-                        <button className="bg-[#36A460] shadow-md">
+                        <button className="bg-gray-100 rounded-xl shadow-md">
                             <img className="max-w-none m-0 " src={element.img} alt={element.title} width="287"  />
                             <h2 className="font-bold text-lg">{element.title}</h2>
                             <span>{element.text}</span>
-                            <p className="font-bold text-lg mt-4">{element.value}</p>
-                            <Modal />
+                            <p className="font-bold text-lg mt-4 mb-4">{element.value}</p>
+                            
                         </button>
                     </div>
                 ))}

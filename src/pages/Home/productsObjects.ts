@@ -1,6 +1,6 @@
 import Smash from "../assets/Images/smash.png"
 
-export const secondObject = [
+export const ProductObject = [
     {
         img: Smash,
         title: "Smash da casa",

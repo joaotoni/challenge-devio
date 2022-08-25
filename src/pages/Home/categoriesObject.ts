@@ -3,7 +3,8 @@ import Fries from "../assets/Images/fries.png"
 import Soda from "../assets/Images/soda.png"
 import Dessert from "../assets/Images/dessert.png"
 
-export const firstObject = [
+
+export const categoriesObject = [
     {
         img: Combos,
         title:"Combos",

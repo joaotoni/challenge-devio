@@ -1,7 +1,7 @@
 import Smash from "../../assets/Images/smash.png"
 import Minus from "../../assets/Icons/minus.png"
 import Plus from "../../assets/Icons/plus.png"
-import {thirtObject} from "../../Objects/thirtObject"
+import {additionObject} from "./additionObjects"
 
 export default function Modal(){
     return(
@@ -34,7 +34,7 @@ export default function Modal(){
                 <h2 className="font-bold text-lg text-left ">Adicionais</h2>
                 <span className="text-sm w-2 ">Selecione os ingredientes que você quer adicionar a mais no seu lanche</span>
             </div>
-            {thirtObject.map((element, index) =>(
+            {additionObject.map((element, index) =>(
                 <div className="flex justify-around" key={element.name + index}>
                     <div>
                         <img src={element.img} alt="" />

@@ -2,7 +2,7 @@ import Bacon from "../assets/Images/bacon.png"
 import Cheddar from "../assets/Images/cheddar.png"
 import Barbecue from "../assets/Images/barbecue.png"
 
-export const thirtObject = [
+export const additionObject = [
     {
         img: Bacon,
         name: "Bacon",
