@@ -1,7 +1,7 @@
 import Modal from "../../components/Modal";
 import {categoriesObject} from "./CategoriesObject"
 import { ProductObject } from "./productsObjects"
-
+import { Link } from "react-router-dom";
 
 export default function Home(){
     return(
@@ -47,7 +47,9 @@ export default function Home(){
             </div>
             <div className="flex justify-center gap-6">
                 <button className="text-xl rounded-xl border border-solid p-4 border-[#125c12] text-[#125c12]">Cancelar</button>
-                <button className="text-xl rounded-xl bg-[#125c12] p-4 text-white">Finalizar pedido</button>
+                <Link className="text-xl rounded-xl bg-[#125c12] p-4 text-white" to={"/payment"}>
+                    Finalizar pedido
+                </Link>
             </div>
         </main>
     )

@@ -1,5 +1,6 @@
 import Payments from "../../assets/Icons/payment.png"
 import {cards} from "./cardsObjects"
+import { Link } from "react-router-dom";
 
 export default function Payment(){
     return(        
@@ -64,7 +65,9 @@ export default function Payment(){
                 </div>
                 <div className="mt-6">
                     <button className="mr-4 text-xl rounded-xl border border-solid p-4 border-[#125c12] text-[#125c12]">Cancelar</button>
-                    <button className="text-xl rounded-xl bg-[#125c12] p-4 text-white">Finalizar pedido</button>
+                    <Link className="text-xl rounded-xl bg-[#125c12] p-4 text-white" to={"/"}>
+                        Finalizar pedido
+                    </Link>
                 </div>
             </div>
         </section>

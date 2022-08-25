@@ -1,4 +1,4 @@
-import Smash from "../assets/Images/smash.png"
+import Smash from "../../assets/Images/smash.png"
 
 export const ProductObject = [
     {
