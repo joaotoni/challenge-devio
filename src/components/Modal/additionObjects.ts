@@ -15,7 +15,7 @@ export const additionObject = [
     },
     {
         img: Barbecue,
-        name: "Molho acompanhamento",
-        text: "Barbecue",
+        name: "Barbecue",
+        text: "",
     },
 ]

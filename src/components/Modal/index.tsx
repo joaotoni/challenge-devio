@@ -5,20 +5,17 @@ import {additionObject} from "./additionObjects"
 import { useContext } from "react"
 import { ModalContext } from "../../contexts/Modal/ModalContext"
 
-
 // interface IModal{
 //     state: boolean
 // }
 
 export default function Modal(){
-    const{
-        showModal,
-        setShowModal,
-    } = useContext(ModalContext)
+    const{showModal,setShowModal,} = useContext(ModalContext)
+    console.log(showModal)
     // console.log(props.state)
     return(
-        <section className={`${showModal ? "hidden" : "block"} py-28    w-full h-full flex justify-center flex-wrap absolute inset-0 bg-gray-600 bg-opacity-25 bg-contain`}>
-            <div className="bg-white rounded-xl w-8/12 h-5/6">
+        <section className="inset-0 bg-black bg-opacity-20 backdrop-blur-[2px] flex py-10 absolute justify-center overflow-y-auto z-50">
+            <div className="bg-white p-5 rounded w-3/4 h-min relative bg-contain">
                 <div>
                     <h1 className="pb-2 pt-6 text-2xl font-bold  ml-6">Revise seu pedido!</h1>  
                 </div>
