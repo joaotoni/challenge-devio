@@ -5,17 +5,13 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ModalContext } from "../../contexts/Modal/ModalContext";
 
-export default function Home(){
-    // const [showModal, setShowModal] = useState(false);
+export default function Home(){ 
     const{showModal,setShowModal,} = useContext(ModalContext)
     const[filter, setFilter] = useState<string>("")
 
-    // const productFilter = ProductObject
-    // .filter((fruta)) =>
-
     return(
         <main className=" ">
-            <div className="flex flex-col items-start md:mb-4 md:items-start md:ml-16" >
+            <section className="flex flex-col items-start md:mb-4 md:items-start md:ml-16" >
                 <span className="pb-2 pt-8 text-2xl font-bold">Seja bem vindo!</span>
                 <input 
                     className="bg-gray-200 p-2 w-3/4 rounded-md md:w-1/5"
@@ -23,12 +19,12 @@ export default function Home(){
                     placeholder="O que você procura?"
                     value={filter}
                     onChange={(ev) => setFilter(ev.target.value)}/>
-            </div>
+            </section>
             <div className="flex  flex-col  items-start ml-8 md:items-start md:mt-14 md:ml-16" >
-                    <h2 className="font-bold text-lg text-left">Categorias</h2>
-                    <span className="font-normal">Navegue por categoria</span>
+                <h2 className="font-bold text-lg text-left">Categorias</h2>
+                <span className="font-normal">Navegue por categoria</span>
             </div>
-            <div className="flex items-center overflow-x-auto scroll-smooth mt-6 md:justify-around overflow-hidden">   
+            <section className="flex items-center overflow-x-auto scroll-smooth mt-6 md:justify-around overflow-hidden">   
                 {categoriesObject.map((element, index) =>(
                     <div className=" flex  px-6 shadow-md flex-col p-6 mr-10 " key={element.title + index}>
                         <button>
@@ -37,18 +33,17 @@ export default function Home(){
                         </button>
                     </div>
                 ))}
-            </div>
+            </section>
             <div className="flex  flex-col  items-start ml-8 mt-8 md:items-start md:mt-14 md:ml-16">
                 <h2 className="font-bold text-lg text-left">Produtos</h2>
                 <span className="font-normal">Selecione um produto para adicionar ao seu pedido</span>
             </div>
-            <div className="flex flex-col md:flex-row md:flex-wrap md:m-0 md:justify-center ">
+            <section className="flex flex-col md:flex-row md:flex-wrap md:m-0 md:justify-center ">
                 {ProductObject.map((element, index) => (
                     <div className=" m-auto mb-8 p-6 md:m-0  " key={element.title + index}>
                         <button 
-                        className="bg-gray-100 rounded-xl shadow-md"
-                        onClick={() => setShowModal(!showModal)}
-                        >
+                            className="bg-gray-100 rounded-xl shadow-md"
+                            onClick={() => setShowModal(!showModal)}>
                             <img className="max-w-none m-0 md:w-[287px] " src={element.img} alt={element.title} width="200px"  />
                             <h2 className="font-bold text-lg">{element.title}</h2>
                             <span>{element.text}</span>
@@ -56,18 +51,18 @@ export default function Home(){
                         </button>                             
                     </div>
                 ))}
-            </div>     
+            </section>     
             {showModal ? (
                 <>  
                  <Modal />
                 </>
               ) : null}
-            <div className="flex justify-center gap-6">
+            <section className="flex justify-center gap-6">
                 <button className="text-xl rounded-xl border border-solid p-4 border-[#125c12] text-[#125c12]">Cancelar</button>
                 <Link className="text-xl rounded-xl bg-[#125c12] p-4 text-white" to={"/payment"}>
                     Finalizar pedido
                 </Link>
-            </div>
+            </section>
         </main>
     )
 }

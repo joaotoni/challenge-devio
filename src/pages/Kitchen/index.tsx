@@ -1,13 +1,11 @@
 import {kitchenDone, kitchenObject} from "./kitchenObject"
 import Check from "../../assets/Icons/check.png"
 import X from "../../assets/Icons/x.png"
-import Smash from "../../assets/Images/smash.png"
-
 
 export default function Kitchen(){
     return(
-        <section className="flex flex-wrap ml-8 md:justify-center ">
-            <div className="md: mr-32">
+        <main className="flex flex-wrap ml-8 md:justify-center ">
+            <section className="md: mr-32">
                 <div className="mt-6 mb-6">
                     <h1 className="font-bold text-xl">Preparando:</h1>
                 </div>
@@ -36,8 +34,8 @@ export default function Kitchen(){
                     <h2 className="font-bold mb-6">Observações:</h2>
                     <textarea className="border border-gray-400 border-solid p-4 resize-none w-10/12 ">Retira a cebola</textarea>
                 </div>
-            </div>
-            <div>
+            </section>
+            <section>
                 <div>
                     <h1 className="font-bold mb-4 md:mt-6">Pronto:</h1>
                 </div>
@@ -59,8 +57,7 @@ export default function Kitchen(){
                         </div>
                     </div>
                 ))}
-                </div>
-            
-        </section>
+            </section> 
+        </main>
     )
 }

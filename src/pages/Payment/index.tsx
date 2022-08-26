@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Payment(){
     return(        
-        <section className="flex flex-wrap mt-8 ml-6 md:flex md:justify-center md:mt-28">
-            <div className="md:mr-56">
+        <main className="flex flex-wrap mt-8 ml-6 md:flex md:justify-center md:mt-28">
+            <section className="md:mr-56">
                 <div className="flex mb-6 ">
                     <img src={Payments} alt="" />
                     <h1 className="font-bold text-xl ml-8">Pagamento</h1>
@@ -31,8 +31,8 @@ export default function Payment(){
                         <span className="rounded-lg border border-solid p-2 bg-gray-100 md:mt-2 ">200</span>
                     </div>
                 </div>
-            </div>
-            <div className="mt-4 mb-2">
+            </section>
+            <section className="mt-4 mb-2">
                 <span className="font-bold ">Selecione a forma de pagamento</span>
                 {cards.map((element, index) =>(
                     <div className="flex justify-around rounded-lg border border-solid border-gray-400 p-1 w-60 md:mb-4 md:mt-4"  key={element.title + index}>
@@ -69,7 +69,7 @@ export default function Payment(){
                         Finalizar pedido
                     </Link>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }

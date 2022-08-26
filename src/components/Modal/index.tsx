@@ -5,21 +5,16 @@ import {additionObject} from "./additionObjects"
 import { useContext } from "react"
 import { ModalContext } from "../../contexts/Modal/ModalContext"
 
-// interface IModal{
-//     state: boolean
-// }
-
 export default function Modal(){
     const{showModal,setShowModal,} = useContext(ModalContext)
-    console.log(showModal)
-    // console.log(props.state)
+
     return(
-        <section className="inset-0 bg-black bg-opacity-20 backdrop-blur-[2px] flex py-10 absolute justify-center overflow-y-auto z-50">
-            <div className="bg-white p-5 rounded w-3/4 h-min relative bg-contain">
+        <main className="inset-0 bg-black bg-opacity-20 backdrop-blur-[2px] flex py-10 absolute justify-center overflow-y-auto z-50">
+            <section className="bg-white p-5 rounded w-3/4 h-min relative bg-contain">
                 <div>
                     <h1 className="pb-2 pt-6 text-2xl font-bold  ml-6">Revise seu pedido!</h1>  
                 </div>
-                <div className="flex ml-2 mt-3">
+                <section className="flex ml-2 mt-3">
                     <div>
                         <img src={Smash} width="232px" alt="" />
                     </div>
@@ -39,7 +34,7 @@ export default function Modal(){
                     <div>
                         <p className="font-bold text-lg">R$30,50</p>
                     </div>
-                </div>
+                </section>
                 <div className="mb-6 ml-6">
                     <h2 className="font-bold text-lg text-left ">Adicionais</h2>
                     <span className="text-sm w-2 ">Selecione os ingredientes que você quer adicionar a mais no seu lanche</span>
@@ -63,14 +58,19 @@ export default function Modal(){
                     <h2 className="font-bold text-lg text-left mb-2">Observações:</h2>
                     <input className="rounded-lg border border-solid p-4 bg-gray-100 w-11/12" placeholder="Adicione uma observação ao pedido" type="text" />
                 </div>
-                <div className="flex justify-center gap-6 mt-6">
-                    <button className="text-xl rounded-xl border border-solid p-4 border-[#125c12] text-[#125c12]"
-                    onClick={() => setShowModal(!open)} >Continuar adicionando</button>
-                    <button className="text-xl rounded-xl bg-[#125c12] p-4 text-white" 
-                    onClick={() => setShowModal(!open)}
-                    >Adiciona ao pedido</button>
-                </div>
-            </div>
-        </section>
+                <section className="flex justify-center gap-6 mt-6">
+                    <button 
+                        className="text-xl rounded-xl border border-solid p-4 border-[#125c12] text-[#125c12]"
+                        onClick={() => setShowModal(!open)} >
+                        Continuar adicionando
+                    </button>
+                    <button 
+                        className="text-xl rounded-xl bg-[#125c12] p-4 text-white" 
+                        onClick={() => setShowModal(!open)}>
+                        Adiciona ao pedido
+                    </button>
+                </section>
+            </section>
+        </main>
     )
 }
