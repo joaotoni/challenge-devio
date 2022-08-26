@@ -7,10 +7,12 @@ import { ModalContext } from "../../contexts/Modal/ModalContext";
 
 export default function Home(){
     // const [showModal, setShowModal] = useState(false);
-    const{
-        showModal,
-        setShowModal,
-    } = useContext(ModalContext)
+    const{showModal,setShowModal,} = useContext(ModalContext)
+    const[filter, setFilter] = useState<string>("")
+
+    // const productFilter = ProductObject
+    // .filter((fruta)) =>
+
     return(
         <main className=" ">
             <div className="flex flex-col items-start md:mb-4 md:items-start md:ml-16" >
@@ -18,7 +20,9 @@ export default function Home(){
                 <input 
                     className="bg-gray-200 p-2 w-3/4 rounded-md md:w-1/5"
                     type="text"
-                    placeholder="O que você procura?"/>
+                    placeholder="O que você procura?"
+                    value={filter}
+                    onChange={(ev) => setFilter(ev.target.value)}/>
             </div>
             <div className="flex  flex-col  items-start ml-8 md:items-start md:mt-14 md:ml-16" >
                     <h2 className="font-bold text-lg text-left">Categorias</h2>
@@ -45,18 +49,16 @@ export default function Home(){
                         className="bg-gray-100 rounded-xl shadow-md"
                         onClick={() => setShowModal(!showModal)}
                         >
-                            <img className="max-w-none m-0 " src={element.img} alt={element.title} width="287"  />
+                            <img className="max-w-none m-0 md:w-[287px] " src={element.img} alt={element.title} width="200px"  />
                             <h2 className="font-bold text-lg">{element.title}</h2>
                             <span>{element.text}</span>
                             <p className="font-bold text-lg mt-4 mb-4">{element.value}</p>
-                        </button>
-                                    
+                        </button>                             
                     </div>
                 ))}
             </div>     
             {showModal ? (
                 <>  
-
                  <Modal />
                 </>
               ) : null}
