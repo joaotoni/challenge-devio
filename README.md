@@ -23,8 +23,8 @@ Contudo as ferramentas utilizadas foram:
 </br>
 
 <div>
-    <img align="center" src="src/assets/Images/readme.png">
-    <ul>
+    <img  src="src/assets/Images/readme.png">
+    <ul align="center">
         <li>./src - Onde contem todos os arquivos do projeto</li>
         <li>./src/assets - Contem duas pastas chamadas de Images e Icons</li>
         <li>./src/components - Onde é armazenado os componentes</li>
@@ -45,7 +45,6 @@ Contudo as ferramentas utilizadas foram:
 ## Aprendizado:
 
 - Consegui melhorar minha velocidade em criação de página estática.
-</br>
 - Consegui melhorar minha manipulação de dados através do uso do context, pois ele diminui o tanto de states que utilizamos em uma pagina, ou seja, diminuimos umas 8 linhas codigo para apenas 4, deixando o codigo mais limpo e mais fácil de ser entendido.
   
 ## Dificuldades:
