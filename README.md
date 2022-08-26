@@ -24,7 +24,8 @@ Contudo as ferramentas utilizadas foram:
 
 <div>
     <img  src="src/assets/Images/readme.png">
-    <ul align="center">
+  </br>
+    <ul>
         <li>./src - Onde contem todos os arquivos do projeto</li>
         <li>./src/assets - Contem duas pastas chamadas de Images e Icons</li>
         <li>./src/components - Onde é armazenado os componentes</li>
